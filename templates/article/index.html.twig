@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block title %}Harvendore blog{% endblock %}
+
+{% block body %}
+
+<section class="blog_articles_container">
+    {% for article in articles %}
+        {% if loop.index is odd %}
+        <a href="{{ path('app_article_show', {'id': article.id}) }}">
+            <div class="blog_article_item">
+                <div class="blog_article_img">
+                    <div class="blog_article_img_border"></div>
+                    {% if article.img %}
+                        <img class="blog_img" src="{{ asset('uploadDirectory/' ~ article.img) }}" alt="{{ article.title }}" >
+                    {% else %}
+                        <img class="blog_img" src="{{ asset('assets/img/questionmarkcake.jpg')}}" alt="Image générique" >
+                    {% endif %}
+                </div>
+                <div class="blog_article_content">
+                    <p class="blog_article_content_title"> {{ article.title }} </p>
+                    <p class="blog_article_content_date"> {{article.createDate|date('d-m-Y')}} </p>
+                    <p class="blog_article_content_text"> {{ article.article_text }} </p>
+                </div>
+            </div>
+        </a> 
+        {% else %}
+        <a href="{{ path('app_article_show', {'id': article.id}) }}">
+            <div class="blog_article_item">
+                <div class="blog_article_content">
+                    <p class="blog_article_content_title"> {{ article.title }} </p>
+                    <p class="blog_article_content_date"> {{article.createDate|date('d-m-Y')}} </p>
+                    <p class="blog_article_content_text"> {{ article.article_text }} </p>
+                </div>
+                <div class="blog_article_img">
+                    <div class="blog_article_img_border"></div>
+                    {% if article.img %}
+                        <img class="blog_img" src="{{ asset('uploadDirectory/' ~ article.img) }}" alt="{{ article.title }}" >
+                    {% else %}
+                        <img class="blog_img" src="{{ asset('assets/img/questionmarkcake.jpg')}}" alt="Image générique" >
+                    {% endif %}
+                </div>
+            </div>
+        </a> 
+        {% endif %}
+    {% endfor %}
+</section>
+ 
+{% endblock %}

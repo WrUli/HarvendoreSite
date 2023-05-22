@@ -1,0 +1,86 @@
+header {
+    height: 25vh;
+    color: rgb(117, 117, 117);
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.header_nav {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    padding-top: 25px;
+    ul {
+        width: 250px;
+        height: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 25px;
+        li, a {
+            line-height: 15px;
+        }
+    }
+}
+
+.header_center {
+    // margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .header_center_title {
+        padding-top: 10px;
+        font-size: 50px;
+        font-family:"PoppinsSB";
+        z-index: 0;
+        line-height: 42px;
+    }
+    .header_center_p {
+        padding-top: 15px;
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+}
+
+.header_lines {
+  height: 20px;
+  width: 75%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 2px solid rgba(211, 211, 211, 0.555);
+  border-bottom: 2px solid rgba(211, 211, 211, 0.555);
+}
+
+.logo_brand {
+    padding-top: 3px;
+    padding-right: 3px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    animation: border-load 4s linear forwards;
+}
+
+@keyframes border-load {
+  0% {
+    border-color: transparent transparent transparent transparent;
+  }
+  20% {
+    border-color: lightblue transparent transparent transparent;
+  }
+  40% {
+    border-color: lightblue lightcoral transparent transparent;
+  }
+  60% {
+    border-color: lightblue lightcoral lightcoral transparent;
+  }
+  80% {
+    border-color: lightblue lightcoral lightcoral lightblue;
+  }
+  100% {
+    border-color: lightblue lightcoral lightcoral lightblue;
+  }
+}

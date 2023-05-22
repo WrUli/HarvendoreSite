@@ -1,0 +1,51 @@
+.blog_articles_container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 150px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog_article_item {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    .blog_article_img {
+        position: relative;
+    }
+    .blog_img {
+        width: 100vh;
+        height: 550px;
+        object-fit: cover;
+        img {
+            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .blog_article_content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .blog_article_content_title{
+            font-size: 40px;
+            font-family: "HindMaduraiSB";
+            color: rgb(56, 56, 56);
+            line-height: 36px;
+        }
+        .blog_article_content_date {
+            font-family: "HindMaduraiR" ;
+            font-size: 20px;
+            margin-left: 5%;
+        }
+        .blog_article_content_text {
+            font-family: "HindMaduraiR" ;
+            font-size: 24px;
+        }
+    }
+}
+
+
+

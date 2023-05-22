@@ -1,0 +1,147 @@
+.pannel_admin_container {
+  display: flex;
+}
+
+.admin_sidebar {
+  top: 0;
+  width: 15vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  padding-top: 12%;
+  background-color: #fff;
+  z-index: 0;
+  
+  a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    background-color: #564d55;
+    color: white;
+  }
+  a:hover {
+    background-color: white;
+    color: #564d55;
+    border:2px solid #564d55;
+  }
+}
+
+.tab_spacing_index_1 {
+  width: 300px;
+}
+
+.tab_spacing_index_2 {
+  width: 200px;
+}
+
+.tab_spacing_index_3 {
+  width: 150px;
+}
+
+.table_admin_addarticle {
+  padding-left: 28%;
+  padding-top: 15px;
+  padding-bottom: 35px;
+  a {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: lightblue;
+  }
+}
+
+.table_admin {
+  padding-left: 28%;
+  th {
+    text-align: center;
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+  td {
+    text-align: center;
+  }
+}
+
+.table_container {
+  padding-top: 25px;
+  width: 60vw;
+}
+
+.tab_container {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.tab_container th {
+  width: 15%;
+}
+
+.admin_tab_title {
+  padding: 10px;
+}
+
+.admin_tab_padding {
+  padding: 10px;
+}
+
+.tab_img {
+  max-width: 200px;
+  max-height: 200px;
+  padding: 10px;
+}
+
+.btn_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+}
+
+.btn_show {
+  background-color: lightgreen;
+}
+
+.btn_modify {
+  background-color: orange;
+}
+
+.btn_delete {
+  background-color: lightcoral;
+}
+
+// USER 
+
+.table_user_admin {
+  padding-left: 28%;
+}
+
+.btn_container_user {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+// COMMENT 
+
+.btn_container_comment {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}

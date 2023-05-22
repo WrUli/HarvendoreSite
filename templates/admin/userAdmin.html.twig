@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+{% block title %}Harvendore Admin{% endblock %}
+
+{% block body %}
+
+<section class="pannel_admin_container">
+
+    <div class="admin_sidebar">
+        <a href="{{path('app_admin_article')}}">Liste des articles</a>
+        <a href="{{path('app_admin_comment')}}">Liste des commentaires</a>
+        <a href="{{path('app_admin_user')}}">Liste des utilisateurs</a>
+    </div>
+
+    <div class="table_container">
+        <table class="table_admin table_user_admin">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Nom</th>
+                    <th>Rôles</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="tab_container">
+                {% for user in users %}
+                    <tr>
+                        <td><p class="admin_tab_padding tab_spacing_index_2">{{ user.email }}</p></td>
+                        <td><p class="admin_tab_padding tab_spacing_index_2">{{ user.name }}</p></td>
+                        <td>
+                            {% if user.roles is defined and user.roles|length %}
+                                <ul class="admin_tab_padding tab_spacing_index_1">
+                                    {% for role in user.roles %}
+                                        <li>{{ role }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </td>
+                        <td class="btn_container_user tab_spacing_index_2">
+                            <a href="" class="btn btn_show">Commentaires</a>
+                            <a href="" class="btn btn_delete">Supprimer</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}
