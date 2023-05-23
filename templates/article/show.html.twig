@@ -11,7 +11,16 @@
 
     <article class="article_container">
         <p class="blog_article_content_title"> {{ article.title }} </p>
-        <p> {{article.createDate|date('d-m-Y')}} </p>
+        <div>
+            <p> {{article.createDate|date('d-m-Y')}} </p> 
+            {% if hasLiked %}
+                <p><i class="fa-solid fa-thumbs-up logo_heart_liked"></i> {{ article.likes }} likes</p>
+            {% else %}
+                <p><i class="fa-solid fa-thumbs-up logo_heart"></i> {{ article.likes }} likes</p>
+            {% endif %}
+        </div>
+        
+        
         <div class="blog_article_img">
             <div class="blog_article_img_border"></div>
             {% if article.img %}
@@ -22,9 +31,8 @@
         </div>
         
         <p> {{article.articleText}} </p>
-        <p>dddddddddddd</p>
         
-        <p>{{ article.likes }} Likes, {{ article.dislikes }} Dislikes</p>
+        
     </article>
 
     {% if app.user %}

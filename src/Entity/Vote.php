@@ -22,6 +22,9 @@ class Vote
     #[ORM\ManyToOne(inversedBy: 'votes')]
     private ?Article $article = null;
 
+    public const TYPE_LIKE = 'like';
+    public const TYPE_DISLIKE = 'dislike';
+
     public function getId(): ?int
     {
         return $this->id;
@@ -63,3 +66,4 @@ class Vote
         return $this;
     }
 }
+

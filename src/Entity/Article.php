@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use App\Entity\Vote;
+use Doctrine\Common\Collections\Criteria;
 use App\Repository\ArticleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -160,6 +162,15 @@ class Article
         }
 
         return $this;
+    }
+
+    public function hasUserLiked(User $user): bool
+    {
+        $criteria = Criteria::create()
+            ->andWhere(Criteria::expr()->eq('user', $user))
+            ->andWhere(Criteria::expr()->eq('type', Vote::TYPE_LIKE));
+
+        return $this->votes->matching($criteria)->count() > 0;
     }
 
     public function getLikes(): ?int

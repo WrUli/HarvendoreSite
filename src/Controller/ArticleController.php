@@ -57,6 +57,8 @@ class ArticleController extends AbstractController
     {
         $article = $articleRepository->findOneBy(['id' => $id]);
         $user = $this->getUser();
+
+        $hasLiked = $user ? $article->hasUserLiked($user) : false;
         
         $comments = $commentRepository->findBy(['article' => $article], ['createDate' => 'DESC']);
         $comment = new Comment();
@@ -74,6 +76,7 @@ class ArticleController extends AbstractController
         
         return $this->render('article/show.html.twig', [
             'article' => $article,
+            'hasLiked' => $hasLiked,
             'commentForm' => $commentForm->createView(),
             'comments' => $comments,
         ]);
