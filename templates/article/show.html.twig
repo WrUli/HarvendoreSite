@@ -11,12 +11,12 @@
 
     <article class="article_container">
         <p class="blog_article_content_title"> {{ article.title }} </p>
-        <div>
-            <p> {{article.createDate|date('d-m-Y')}} </p> 
+        <div class="blog_article_content_datelike">
+            <p class="bacdl_ad"> {{article.createDate|date('d-m-Y')}} </p> 
             {% if hasLiked %}
-                <p><i class="fa-solid fa-thumbs-up logo_heart_liked"></i> {{ article.likes }} likes</p>
+                <a href="" class="likeIcon"><p><i class="fa-solid fa-thumbs-up logo_heart_liked likeIcon"></i> {{ article.likes }} likes</p>
             {% else %}
-                <p><i class="fa-solid fa-thumbs-up logo_heart"></i> {{ article.likes }} likes</p>
+                <a href="" class="likeIcon"><p><i class="fa-solid fa-thumbs-up logo_heart "></i> {{ article.likes }} likes</p></a>
             {% endif %}
         </div>
         
@@ -36,7 +36,7 @@
     </article>
 
     {% if app.user %}
-        <form action="{{path('app_article_vote')}}" method="POST">
+        <form id="voteForm" action="{{path('app_article_vote')}}" method="POST">
             <input type="hidden" value="like" name="value">
             <input type="hidden" value="{{article.id}}" name="idArticle">
             <input type="submit" value="like">

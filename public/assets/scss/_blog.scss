@@ -59,4 +59,12 @@
     padding: 4px;
     border-radius: 50%;
 }
-
+.blog_article_content_datelike {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    .bacdl_ad {
+        padding-top: 7px;
+    }
+}

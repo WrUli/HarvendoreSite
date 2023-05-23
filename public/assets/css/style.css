@@ -367,6 +367,16 @@ header {
   border-radius: 50%;
 }
 
+.blog_article_content_datelike {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 25px;
+  padding-left: 25px;
+}
+.blog_article_content_datelike .bacdl_ad {
+  padding-top: 7px;
+}
+
 .article_link {
   display: inline-block;
   font-family: "HindMaduraiSB";
