@@ -28,7 +28,7 @@ security:
                 default_target_path: /
             logout:
                 path: app_logout
-                target: /
+                target: /blog
             
                 # default_target_path: app_login
             # where to redirect fter logout

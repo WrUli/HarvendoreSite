@@ -42,9 +42,14 @@
         }
         .blog_article_content_text {
             font-family: "HindMaduraiR" ;
-            font-size: 24px;
+            font-size: 22px;
         }
     }
+}
+
+.blog_a_c_box {
+    display: flex;
+    gap: 20px;
 }
 
 .logo_heart {

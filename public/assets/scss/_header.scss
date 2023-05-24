@@ -66,7 +66,7 @@ header {
   height: 150px;
   padding-top: 5%;
   border-bottom-left-radius: 300px;
-  background-color: rgba(211, 211, 211, 0.555);
+  background-color: rgba(231, 231, 231, 0.555);
 }
 
 .navbar-menu li {
@@ -98,9 +98,12 @@ header {
         line-height: 42px;
     }
     .header_center_p {
-        padding-top: 15px;
-        font-size: 24px;
-        letter-spacing: 2px;
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      padding-top: 15px;
+      font-size: 24px;
+      letter-spacing: 2px;
     }
 }
 
@@ -121,7 +124,10 @@ header {
     padding-bottom: 4px;
     border: 2px solid transparent;
     border-radius: 8px;
-    animation: border-load 4s linear forwards;
+}
+
+.lb1 {
+  animation: border-load 4s linear forwards;
 }
 
 @keyframes border-load {
@@ -142,5 +148,55 @@ header {
   }
   100% {
     border-color: lightblue lightcoral lightcoral lightblue;
+  }
+}
+
+.lb2 {
+  animation: border-load2 4s linear forwards;
+}
+
+@keyframes border-load2 {
+  0% {
+    border-color: transparent transparent transparent transparent;
+  }
+  20% {
+    border-color: lightcoral transparent transparent transparent;
+  }
+  40% {
+    border-color: lightcoral lightcoral transparent transparent;
+  }
+  60% {
+    border-color: lightcoral lightcoral lightcoral transparent;
+  }
+  80% {
+    border-color: lightcoral lightcoral lightcoral lightcoral;
+  }
+  100% {
+    border-color: lightcoral lightcoral lightcoral lightcoral;
+  }
+}
+
+.lb3 {
+  animation: border-load3 4s linear forwards;
+}
+
+@keyframes border-load3 {
+  0% {
+    border-color: transparent transparent transparent transparent;
+  }
+  20% {
+    border-color:purple transparent transparent transparent;
+  }
+  40% {
+    border-color:purple purple transparent transparent;
+  }
+  60% {
+    border-color:purple purple lightcoral transparent;
+  }
+  80% {
+    border-color:purple purple purple;
+  }
+  100% {
+    border-color:purple purple purple;
   }
 }

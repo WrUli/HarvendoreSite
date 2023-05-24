@@ -123,8 +123,8 @@ class AdminController extends AbstractController
             $em->remove($comment);
         }
 
-        $commentRepository = $em->getRepository(Vote::class);
-        $votes = $commentRepository->findBy(['article' => $id]);
+        $voteRepository = $em->getRepository(Vote::class);
+        $votes = $voteRepository->findBy(['article' => $id]);
         foreach ($votes as $vote) {
             $em->remove($vote);
         }

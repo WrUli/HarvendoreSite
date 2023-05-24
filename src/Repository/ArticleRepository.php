@@ -43,7 +43,7 @@ class ArticleRepository extends ServiceEntityRepository
     public function findAllArticleAuthor()
     {
         $qb = $this->createQueryBuilder('a')
-            ->select('a.id', 'a.title', 'a.article_text','a.createDate', 'a.img')
+            ->select('a.id', 'a.title', 'a.article_text','a.createDate', 'a.img', 'a.likes')
             ->orderBy('a.createDate', 'DESC')
             ->getQuery()
             ->getResult();

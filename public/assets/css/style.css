@@ -118,7 +118,7 @@ header {
   height: 150px;
   padding-top: 5%;
   border-bottom-left-radius: 300px;
-  background-color: rgba(211, 211, 211, 0.555);
+  background-color: rgba(231, 231, 231, 0.555);
 }
 
 .navbar-menu li {
@@ -153,6 +153,9 @@ header {
   line-height: 42px;
 }
 .header_center .header_center_p {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
   padding-top: 15px;
   font-size: 24px;
   letter-spacing: 2px;
@@ -175,6 +178,9 @@ header {
   padding-bottom: 4px;
   border: 2px solid transparent;
   border-radius: 8px;
+}
+
+.lb1 {
   animation: border-load 4s linear forwards;
 }
 
@@ -196,6 +202,54 @@ header {
   }
   100% {
     border-color: lightblue lightcoral lightcoral lightblue;
+  }
+}
+.lb2 {
+  animation: border-load2 4s linear forwards;
+}
+
+@keyframes border-load2 {
+  0% {
+    border-color: transparent transparent transparent transparent;
+  }
+  20% {
+    border-color: lightcoral transparent transparent transparent;
+  }
+  40% {
+    border-color: lightcoral lightcoral transparent transparent;
+  }
+  60% {
+    border-color: lightcoral lightcoral lightcoral transparent;
+  }
+  80% {
+    border-color: lightcoral lightcoral lightcoral lightcoral;
+  }
+  100% {
+    border-color: lightcoral lightcoral lightcoral lightcoral;
+  }
+}
+.lb3 {
+  animation: border-load3 4s linear forwards;
+}
+
+@keyframes border-load3 {
+  0% {
+    border-color: transparent transparent transparent transparent;
+  }
+  20% {
+    border-color: purple transparent transparent transparent;
+  }
+  40% {
+    border-color: purple purple transparent transparent;
+  }
+  60% {
+    border-color: purple purple lightcoral transparent;
+  }
+  80% {
+    border-color: purple purple purple;
+  }
+  100% {
+    border-color: purple purple purple;
   }
 }
 .footer {
@@ -413,7 +467,12 @@ header {
 }
 .blog_article_item .blog_article_content .blog_article_content_text {
   font-family: "HindMaduraiR";
-  font-size: 24px;
+  font-size: 22px;
+}
+
+.blog_a_c_box {
+  display: flex;
+  gap: 20px;
 }
 
 .logo_heart {
@@ -441,12 +500,12 @@ header {
 }
 
 .article_link {
-  display: inline-block;
+  width: 275px;
   font-family: "HindMaduraiSB";
   color: rgb(56, 56, 56);
   font-size: 22px;
-  padding-top: 75px;
-  padding-bottom: 25px;
+  margin-top: 75px;
+  margin-bottom: 25px;
 }
 
 .article_container {
@@ -479,6 +538,169 @@ header {
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
+}
+
+.button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+.article_content_text_container {
+  padding-top: 50px;
+}
+.article_content_text_container .article_content_text {
+  font-family: "PoppinsR";
+  font-size: 18px;
+}
+
+.article_comment {
+  padding-top: 75px;
+}
+.article_comment .article_comment_title {
+  font-family: "HindMaduraiSB";
+  color: rgb(56, 56, 56);
+  font-size: 22px;
+}
+.article_comment .article_comment_container {
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-family: "PoppinsR";
+}
+.article_comment .article_comment_container_bis {
+  display: flex;
+  gap: 10px;
+}
+.article_comment .accb {
+  padding-top: 6px;
+}
+
+.article_comment_btn_delete {
+  width: 78px;
+  padding: 5px 8px;
+  border-radius: 15px;
+  background-color: lightcoral;
+  display: inline;
+  color: black;
+}
+
+.article_comment_btn_moderate {
+  width: 62px;
+  padding: 5px 8px;
+  border-radius: 15px;
+  background-color: lightsalmon;
+  display: inline;
+  color: black;
+}
+
+.article_comment_form {
+  margin-top: 20px;
+}
+
+.article_comment_form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.article_comment_form label {
+  font-weight: bold;
+}
+
+.article_comment_form textarea {
+  height: 50px;
+  width: 200px;
+  resize: both;
+}
+
+.article_comment_form button {
+  padding: 10px;
+  background-color: rgba(189, 189, 189, 0.555);
+  color: rgb(117, 117, 117);
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 175px;
+}
+
+.article_comment_form p {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.form-signin {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.mb-3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.label-gray {
+  color: rgb(117, 117, 117);
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  display: block;
+  width: 106%;
+  padding: 10px;
+  background-color: #3498db;
+}
+
+.alert-danger {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+.register-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.register-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-form {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.register-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.register-button {
+  display: block;
+  width: 106%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  text-align: center;
+  border: none;
 }
 
 @media screen and (max-width: 2560px) {

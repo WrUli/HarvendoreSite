@@ -18,7 +18,10 @@
                 </div>
                 <div class="blog_article_content">
                     <p class="blog_article_content_title"> {{ article.title }} </p>
-                    <p class="blog_article_content_date"> {{article.createDate|date('d-m-Y')}} </p>
+                    <div class="blog_a_c_box">
+                        <p class="blog_article_content_date"> {{article.createDate|date('d-m-Y')}} </p>
+                        <p><i class="fa-solid fa-thumbs-up logo_heart_liked likeIcon"></i> {{ article.likes }} likes</p>
+                    </div>
                     <p class="blog_article_content_text"> {{ article.article_text }} </p>
                 </div>
             </div>
@@ -28,7 +31,10 @@
             <div class="blog_article_item">
                 <div class="blog_article_content">
                     <p class="blog_article_content_title"> {{ article.title }} </p>
-                    <p class="blog_article_content_date"> {{article.createDate|date('d-m-Y')}} </p>
+                    <div class="blog_a_c_box">
+                        <p class="blog_article_content_date"> {{article.createDate|date('d-m-Y')}} </p>
+                        <p><i class="fa-solid fa-thumbs-up logo_heart_liked likeIcon"></i> {{ article.likes }} likes</p>
+                    </div>
                     <p class="blog_article_content_text"> {{ article.article_text }} </p>
                 </div>
                 <div class="blog_article_img">
