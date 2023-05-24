@@ -31,42 +31,42 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
-            ->add('plainPassword', RepeatedType::class, [
-                'mapped' => false,
-                'type' => PasswordType::class,
-                'invalid_message' => 'Les mots de passe doivent correspondre.',
-                'options' => ['attr' => ['class' => 'password-field']],
-                'required' => true,
-                'first_options'  => [
-                    'label' => 'Mot de passe',
-                    'attr' => [
-                        'placeholder' => 'Votre mot de passe'
+        ->add('plainPassword', RepeatedType::class, [
+            'mapped' => false,
+            'type' => PasswordType::class,
+            'invalid_message' => 'Les mots de passe doivent correspondre.',
+            'options' => ['attr' => ['class' => 'password-field']],
+            'required' => true,
+            'first_options'  => [
+                'label' => 'Mot de passe',
+                'attr' => [
+                    'placeholder' => 'Votre mot de passe'
 
-                    ]
-                ],
-                'second_options' => [
-                    'label' => 'Confirmer le mot de passe',
-                    'attr' => [
-                        'placeholder' => 'Retapper votre mot de passe'
-                    ]
-                    
-                ],
-                'constraints' => [
-                    new NotBlank([
-                        'message' => 'Please enter a password',
-                    ]),
-                    new Length([
-                        'min' => 6,
-                        'minMessage' => 'Your password should be at least {{ limit }} characters',
-                        // max length allowed by Symfony for security reasons
-                        'max' => 4096,
-                        'maxMessage' => 'Password max {{ limit }}'
-                    ]),
-                    // new EqualTo('plainPassword', 'Les champs de mot de passe ne correpondent pas'),
-                    new Regex([
-                        'pattern' => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/',
-                        'message' => 'Le mot de passe doit contenir : une lettre minuscule, une lettre majuscule, un chiffre et doit être d\'au moins 6 caractères.'
-                    ]),
+                ]
+            ],
+            'second_options' => [
+                'label' => 'Confirmer le mot de passe',
+                'attr' => [
+                    'placeholder' => 'Retapper votre mot de passe'
+                ]
+                
+            ],
+            'constraints' => [
+                new NotBlank([
+                    'message' => 'Please enter a password',
+                ]),
+                new Length([
+                    'min' => 6,
+                    'minMessage' => 'Your password should be at least {{ limit }} characters',
+                    // max length allowed by Symfony for security reasons
+                    'max' => 4096,
+                    'maxMessage' => 'Password max {{ limit }}'
+                ]),
+                // new EqualTo('plainPassword', 'Les champs de mot de passe ne correpondent pas'),
+                new Regex([
+                    'pattern' => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/',
+                    'message' => 'Le mot de passe doit contenir : une lettre minuscule, une lettre majuscule, un chiffre et doit être d\'au moins 6 caractères.'
+                ]),
 
                 ],
             ])
