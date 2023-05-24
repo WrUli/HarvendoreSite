@@ -11,9 +11,7 @@
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
-        {% block javascripts %}
-            <script src="{{ asset('assets/index.js') }}"></script>
-        {% endblock %}
+        
     </head>
 
     <body>
@@ -24,4 +22,8 @@
         </main>
         {% include 'commons/_footer.html.twig' %}
     </body>
+
+    {% block javascripts %}
+        <script src="{{ asset('assets/index.js') }}"></script>
+    {% endblock %}
 </html>

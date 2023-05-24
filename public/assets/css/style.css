@@ -62,19 +62,82 @@ header {
 .header_nav {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding-top: 25px;
 }
-.header_nav ul {
-  width: 250px;
-  height: 25px;
+
+.navbar-toggle {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 25px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  margin-right: 25px;
+  cursor: pointer;
 }
-.header_nav ul li, .header_nav ul a {
-  line-height: 15px;
+
+.bar {
+  position: relative;
+  width: 30px;
+  height: 2.5px;
+  background-color: rgb(117, 117, 117);
+  transition: transform 0.3s ease;
+}
+
+.bar.active:nth-child(2) {
+  transform: scaleX(0);
+  z-index: 2;
+  background-color: rgb(117, 117, 117);
+}
+
+.bar.active:first-child {
+  transform: translateY(11px) rotate(45deg);
+  z-index: 2;
+  background-color: rgb(117, 117, 117);
+}
+
+.bar.active:last-child {
+  transform: translateY(-6px) rotate(-45deg);
+  z-index: 2;
+  background-color: rgb(117, 117, 117);
+}
+
+.navbar-menu {
+  position: absolute;
+  display: none;
+  width: 150px;
+  height: 25px;
+  margin-top: 30px;
+  list-style: none;
+}
+
+.navbar-menu.active {
+  top: -20%;
+  display: block;
+  width: 200px;
+  height: 150px;
+  padding-top: 5%;
+  border-bottom-left-radius: 300px;
+  background-color: rgba(211, 211, 211, 0.555);
+}
+
+.navbar-menu li {
+  font-family: "PoppinsR";
+  font-size: 15px;
+  color: rgb(117, 117, 117);
+  line-height: 35px;
+}
+
+.first-li {
+  padding-left: 30px;
+}
+
+.second-li {
+  padding-left: 50px;
+}
+
+.last-li {
+  padding-left: 70px;
 }
 
 .header_center {
@@ -382,9 +445,8 @@ header {
   font-family: "HindMaduraiSB";
   color: rgb(56, 56, 56);
   font-size: 22px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-left: 25vh;
+  padding-top: 75px;
+  padding-bottom: 25px;
 }
 
 .article_container {

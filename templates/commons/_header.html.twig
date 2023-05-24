@@ -1,17 +1,22 @@
 <header>
     
     <nav class="header_nav">
-        <ul>
+        <div class="navbar-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar-menu">
             {# <li><a href="{{path('app_blog')}}">Revenir au blog</a></li> #}
             {% if  app.user  %}
-                <li> <span class="header_loged_user">Connecté: {{app.user.name }}</span> </li>
-                <li> <a href="{{path('app_logout')}}">Se déconnecter</a> </li>
+                <li class="first-li"> <span class="header_loged_user"> <i class="fa-regular fa-user"></i> : {{app.user.name }}</span> </li>
+                <li class="second-li"> <a href="{{path('app_logout')}}">Se déconnecter</a> </li>
                 {% if is_granted('ROLE_ADMIN') %}
-                    <li> <a href="{{ path('app_admin_article') }}">Pannel Admin</a> </li>
+                    <li class="last-li"> <a href="{{ path('app_admin_article') }}">Pannel Admin</a> </li>
                 {% endif %}
                 {% else %}
-                    <li> <a href="{{path('app_register_home')}}">Créer un compte</a> </li>
-                    <li> <a href="{{path('app_login')}}">Se connecter</a> </li>
+                    <li class="first-li"> <a href="{{path('app_register_home')}}">Créer un compte</a> </li>
+                    <li class="second-li"> <a href="{{path('app_login')}}">Se connecter</a> </li>
             {% endif %}
 
         </ul> 
@@ -24,16 +29,15 @@
                     <p>Harvendore</p>
                 </div>
             </a>
-            <p class="header_center_p">Retrouvez moi sur les réseaux  <i class="fa-brands fa-tiktok logo_brand"></i></p>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+            <p class="header_center_p"> 
+                <i class="fa-brands fa-tiktok logo_brand"></i>
+            </p>
+            
+            <div class="header_lines">
+            </div>
         </div>
 
-        <div class="header_lines">
-        </div>
+        
 
     {% if  app.user  %}
         

@@ -5,11 +5,12 @@
 {% block body %}
 
     
-    <a href="{{ path('app_blog') }}" class="article_link">
-        <p>Revenir à tous les articles</p>
-    </a>
+    
 
     <article class="article_container">
+        <a href="{{ path('app_blog') }}" class="article_link">
+            <p>Revenir à tous les articles</p>
+        </a>
         <p class="blog_article_content_title"> {{ article.title }} </p>
         <div class="blog_article_content_datelike">
             <p class="bacdl_ad"> {{article.createDate|date('d-m-Y')}} </p> 
