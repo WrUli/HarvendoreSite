@@ -1,8 +1,47 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Home Harvendore{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <link rel="stylesheet" href="{{asset('assets/libs/css/all.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
 
-{% block title %}Home page{% endblock %}
+        
+    </head>
 
-{% block body %}
-    <h1>Home page</h1>
+    <body id="boddy">
+        <main>
+            <div class="carousel-container">
+                <div class="slide active">
+                    <img src="{{ asset('assets/img/6Switch.jpg')}}" alt="Image 1">
+                </div>
+                    <div class="slide">
+                <img src="{{ asset('assets/img/Emu.jpg')}}" alt="Image 2">
+                    </div>
+                <div class="slide">
+                    <img src="{{ asset('assets/img/SN30PRO.png')}}" alt="Image 3">
+                </div>
+            </div>
+            <div class="text-overlay">
+                <div class="to_ttl_container">
+                    <p class="to_ttl">Project.</p>
+                    <p class="to_ttl">Harvendore</p>
+                </div>
+                <h1></br></h1>
+            </div>
+        </main>
+        {% block javascripts %}
+            <script src="{{ asset('assets/home.js') }}"></script>
+        {% endblock %}
 
-{% endblock %}
+    </body>
+
+
+
+    
+</html>
